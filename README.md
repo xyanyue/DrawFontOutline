@@ -26,10 +26,6 @@ go build -o libPDraw.so -buildmode=c-shared draw.go
 #include "PDraw.h"
 ```
 
-
-参考：
-https://github.com/NiuStar/DrawFont/
-
 3、添加方法
 
 ```C
