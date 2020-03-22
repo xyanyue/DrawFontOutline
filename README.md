@@ -97,3 +97,6 @@ make & make install
 修改 php.ini 写入 extends.so
 
 
+参考
+https://github.com/NiuStar/DrawFont/
+
