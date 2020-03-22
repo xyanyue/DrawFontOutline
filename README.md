@@ -92,6 +92,10 @@ LDFLAGS = -L./ -L/usr/local/freetype/lib -lPDraw -lfreetype -Wl,-rpath,/data/gol
 make & make install
 修改 php.ini 写入 extends.so
 
+```PHP
+<?php
+MILIDrawStringToImg("测试测试","wryhBold.ttf","background.png","outx.png","220,20,60,0","27,91,97,0",100,20,200,200);
+```
 
 参考
 https://github.com/NiuStar/DrawFont/
