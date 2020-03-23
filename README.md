@@ -94,7 +94,7 @@ make & make install
 
 ```PHP
 <?php
-MILIDrawStringToImg("测试测试","wryhBold.ttf","background.png","outx.png","220,20,60,0","27,91,97,0",100,20,200,200);
+MILIDrawStringToImg("测试22","wryhBold.ttf","background.png","outx.png","220,20,60,0","27,91,97,0",100,20,200,200);
 ```
 
 ![效果图](https://github.com/xyanyue/DrawFontOutline/blob/master/out.png?row=true)
