@@ -17,6 +17,7 @@ go build -o libPDraw.so -buildmode=c-shared draw.go
 //会生成 libPDraw.so 和 libPDraw.h 文件
 ```
 >  如果报`You can also manually git clone the repository to $GOPATH/src/golang.org/x/image` 请自行使用`export GOPROXY=https://mirrors.aliyun.com/goproxy/`并开启`export GO111MODULE=on`
+
 > 如果go版本小于1.11 请自行下载`https://github.com/golang/image`并放入GOPATH中
 
 第三步：
@@ -94,6 +95,7 @@ LFLAGS =
 LDFLAGS = -L./ -L/usr/local/freetype/lib -lPDraw -lfreetype -Wl,-rpath,/data/golang/draw/DrawFont -L/data/golang/draw/DrawFont
 ```
 > 在INCLUDES中添加了`-I/usr/local/freetype/include/free` freetype的头文件路径
+
 > 在LDFLAGS中 添加了 freetype的lib路径【也即是libfreetype.so的路径】以及 `-lPDraw -lfreetype`。`/data/golang/draw/DrawFont -L/data/golang/draw/DrawFont` 是libPDraw.so的路径
 最后
 
