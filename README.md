@@ -16,6 +16,8 @@ ar r libDrawBrush.so DrawBrush.o DrawFont.o
 go build -o libPDraw.so -buildmode=c-shared draw.go
 //会生成 libPDraw.so 和 libPDraw.h 文件
 ```
+>  如果报`You can also manually git clone the repository to $GOPATH/src/golang.org/x/image` 请自行使用`export GOPROXY=https://mirrors.aliyun.com/goproxy/`并开启`export GO111MODULE=on`
+> 如果go版本小于1.11 请自行下载`https://github.com/golang/image`并放入GOPATH中
 
 第三步：
 
