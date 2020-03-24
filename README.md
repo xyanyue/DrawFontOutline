@@ -1,4 +1,4 @@
-第一步：
+#####第一步：
 
 根据编译命令生成适于自己平台的动态库
 
@@ -8,7 +8,7 @@ g++ -o DrawBrush.o -c DrawBrush.c -fPIC -I/usr/local/freetype/include/freetype2 
 ar r libDrawBrush.so DrawBrush.o DrawFont.o
 ```
 
-第二步：
+#####第二步：
 
 修改 draw.go 里面关于 freetype 的链接路径
 
@@ -20,7 +20,7 @@ go build -o libPDraw.so -buildmode=c-shared draw.go
 
 > 如果go版本小于1.11 请自行下载`https://github.com/golang/image`并放入GOPATH中
 
-第三步：
+#####第三步：
 
 1、创建 PHP 扩展 
 ```bash
@@ -78,7 +78,7 @@ PHP_FUNCTION(MILIDrawStringToImg)
 PHP_FE(MILIDrawStringToImg,NULL)
 ```
 
-第四步：
+#####第四步：
 
 config.m4 取消 PHP_ARG_WITH 注释【`3行`】
 
@@ -97,12 +97,12 @@ LDFLAGS = -L./ -L/usr/local/freetype/lib -lPDraw -lfreetype -Wl,-rpath,/data/gol
 > 在INCLUDES中添加了`-I/usr/local/freetype/include/free` freetype的头文件路径
 
 > 在LDFLAGS中 添加了 freetype的lib路径【也即是libfreetype.so的路径】以及 `-lPDraw -lfreetype`。`/data/golang/draw/DrawFont -L/data/golang/draw/DrawFont` 是libPDraw.so的路径
-最后
+#####最后
 
 make & make install
 修改 php.ini 写入 extends.so
 
-重启测试。。
+#####重启测试。。
 
 ```PHP
 //测试
